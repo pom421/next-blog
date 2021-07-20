@@ -6,15 +6,20 @@
   "scripts": {
     "dev": "next",
     "build": "node ./scripts/gen-rss.js && next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "fresh-install": "rm -rf node_modules/ .next/ && yarn",
+    "check-all": "yarn lint && yarn test"
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
-    "next": "latest",
+    "next": "^11.0.1",
     "nextra": "^0.4.4",
     "nextra-theme-blog": "^0.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-rough-notation": "^1.0.1",
+    "react-social-icons": "^5.5.1",
     "rss": "^1.2.2"
   },
   "prettier": {
