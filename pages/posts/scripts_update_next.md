@@ -8,15 +8,14 @@ author: You
 
 import { RoughNotation } from "react-rough-notation"
 import Image from 'next/image'
-import yarn from '../../public/images/scripts_update_next/yarn.png'
+import mainPicture from '../../public/images/scripts_update_next/markus-winkler-cxoR55-bels-unsplash.jpeg'
+import yarnPicture from '../../public/images/scripts_update_next/yarn.png'
 
 <Image
-  src="/images/scripts_update_next/markus-winkler-cxoR55-bels-unsplash.jpeg"
+  src={mainPicture}
   alt="Photo"
-  width={1125}
-  height={750}
   priority
-  className="next-image"
+  placeholder="blur"
 />_Credits: https://unsplash.com/@markuswinkler_
 
 # Upgrader un projet Next.js
@@ -51,9 +50,9 @@ yarn upgrade-interactive
 Cette commande permet de visualiser toutes les librairies dont une version mineur/patch plus récente se trouve sur le registre [npmjs](https://www.npmjs.com/).
 
 <Image
-  src={yarn}
-  alt="Photo"
-  priority
+  src={yarnPicture}
+  alt="Snapshot of yarn uprade-interactive command"
+  placeholder="blur"
 />
 
 C'est très intuitif : on navigue avec le clavier, on sélectionne avec `Espace`. Une fois qu'on a coché toutes les librairies à upgrader, on appuie sur `Entrée`.
@@ -66,7 +65,7 @@ C'est cependant très risqué et pour ma part, je ne l'utilise que pour des peti
 
 ### Mais alors quand change-t-on les versions majeures?
 
-On a vu que la migration des dépendances de type mineure/patch, sont une opération qu'on peut faire sans trop réfléchir sur un grand ensemble de librairies.
+On a vu que la migration des dépendances de type mineur/patch, sont une opération qu'on peut faire sans trop réfléchir sur un grand ensemble de librairies.
 
 En revanche, pour les versions majeures, chaque migration doit être traitée indépendamment. S'il s'avère que vous avez Next, Zod et React Hook Form qui évoluent tous les 3 avec des breaking changes, ce sont 3 tâches de développement à faire en séquence.
 
